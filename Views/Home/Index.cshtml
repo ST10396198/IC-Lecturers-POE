@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>Welcome to the Contract Monthly Claim System</h1>
+
+<p>This system is used by lecturers to submit their monthly claims, and by Programme Coordinators and Academic Managers to approve or reject them. Below are the actions you can take based on your role:</p>
+
+<div>
+    <h3>For Lecturers:</h3>
+    <ul>
+        <li><a href="@Url.Action("SubmitClaim", "Claim")">Submit a New Claim</a></li>
+        <li><a href="@Url.Action("ViewClaims", "Claim")">View Your Claims</a></li>
+    </ul>
+
+    <h3>For Programme Coordinators:</h3>
+    <ul>
+        <li><a href="@Url.Action("PendingClaims", "Claim")">View Pending Claims</a></li>
+        <li><a href="@Url.Action("ApprovedClaims", "Claim")">View Approved Claims</a></li>
+    </ul>
+
+    <h3>For Academic Managers:</h3>
+    <ul>
+        <li><a href="@Url.Action("PendingClaims", "Claim")">Review Pending Claims</a></li>
+        <li><a href="@Url.Action("Reports", "Claim")">Generate Reports</a></li>
+    </ul>
+</div>
+
+<footer>
+    <p>&copy; 2024 Contract Monthly Claim System</p>
+</footer>
+

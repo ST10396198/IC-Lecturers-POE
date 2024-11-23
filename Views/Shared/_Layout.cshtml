@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li><a href="@Url.Action("SubmitClaim", "Claim")">Submit Claim</a></li>
+                <li><a href="@Url.Action("PendingClaims", "Claim")">Pending Claims</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody() <!-- Content of individual views will be rendered here -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Contract Monthly Claim System</p>
+    </footer>
+</body>
+</html>

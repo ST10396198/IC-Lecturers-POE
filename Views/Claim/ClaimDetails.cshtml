@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Claim Details";
+}
+
+<h1>Claim Details</h1>
+<p><strong>Lecturer:</strong> @Model.LecturerName</p>
+<p><strong>Hours Worked:</strong> @Model.HoursWorked</p>
+<p><strong>Hourly Rate:</strong> @Model.HourlyRate</p>
+<p><strong>Notes:</strong> @Model.Notes</p>
+<p><strong>Supporting Document:</strong> <a href="@Model.SupportingDocumentUrl">Download</a></p>
+
+<form method="post">
+    <button type="submit" formaction="@Url.Action("Approve", "Claim", new { claimId = Model.Id })">Approve</button>
+    <button type="submit" formaction="@Url.Action("Reject", "Claim", new { claimId = Model.Id })">Reject</button>
+</form>

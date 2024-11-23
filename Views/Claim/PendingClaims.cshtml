@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Pending Claims";
+}
+
+<h1>Pending Claims</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Lecturer</th>
+            <th>Hours Worked</th>
+            <th>Hourly Rate</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var claim in Model.Claims)
+        {
+            <tr>
+                <td>@claim.LecturerName</td>
+                <td>@claim.HoursWorked</td>
+                <td>@claim.HourlyRate</td>
+                <td>@claim.Status</td>
+                <td>
+                    <a href="@Url.Action("Approve", "Claim", new { claimId = claim.Id })">Approve</a>
+                    <a href="@Url.Action("Reject", "Claim", new { claimId = claim.Id })">Reject</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
