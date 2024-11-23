@@ -1,7 +1,7 @@
 ﻿namespace ContractMonthlyClaimSystem
 {
     using Microsoft.EntityFrameworkCore;
-    using System.Collections.Generic;
+
 
     public class ApplicationDbContext : DbContext
     {
