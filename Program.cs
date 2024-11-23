@@ -10,7 +10,6 @@ app.UseStaticFiles();  // Make sure static files are being served
 app.MapRazorPages();
 app.Run();
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var _ = builder.Build();
